@@ -4,276 +4,379 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Trend Blogger</title>
-    <!-- Box-icon -->
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
+    <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
   </head>
   <body>
-    <header>
-      <div class="nav container">
-        <a href="#" class="logo">CERITA <span>SUPRIYADI</span></a>
-        <a href="#" class="login">Sign Up</a>
+    <nav id="desktop-nav">
+      <div class="logo">Supriyadi</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">tentang</a></li>
+          <li><a href="#experience">pengalaman</a></li>
+          <li><a href="#projects">projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
       </div>
-    </header>
-
-    <section class="home" id="home">
-      <div class="home-text container">
-        <h2 class="home-title">MANUSIA BIADAB</h2>
-        <span class="home-subtitle">Cerita Hebat supriyadi</span>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Supriyadi</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">Tentang</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Pengalaman</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">project</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/supri1.png" alt="John Doe profile picture" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, saya Supriyadi</p>
+        <h1 class="title">Supriyadi</h1>
+        <p class="section__text__p2">Ecommerce Spesialist</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/resume-example.pdf')"
+          >
+            Download CV
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact Info
+          </button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="My LinkedIn profile"
+            class="icon"
+            onclick="location.href='https://linkedin.com/'"
+          />
+          <img
+            src="./assets/github.png"
+            alt="My Github profile"
+            class="icon"
+            onclick="location.href='https://github.com/'"
+          />
+        </div>
       </div>
     </section>
-
-    <section class="about container" id="about">
-      <div class="contentBx">
-        <h2 class="titleText">pesan penting Kanggo kowe Pemain Slot</h2>
-        <p class="title-text">
-          berhentilah sebelum semuanya terlambat. Perjudian dan kekerasan
-          Tidak pernah membawa hasil yang baik. Jaga keluarga Anda dan jaga nama baik. Kehidupan adalah
-          tentang pilihan, dan Anda masih memiliki waktu untuk memilih yang benar.
-          Jangan bawa keluarga Anda dalam kesulitan, dan jangan hancurkan hidup orang lain.
-          <br />Jika Anda terjebak dalam masalah,hindari kekerasan atau tindakan kriminal
-          Melakukan hal seperti ini, terutama di tempat tinggal
-          orang lain seperti kontrakan, akan merugikan pemilik kontrakan dan lingkungan sekitar.
-          Rumah tersebut bisa kehilangan penyewa dan sepi
-        </p>
-        <a href="#" class="btn2">Baca Selengkapnya</a>
+    <section id="about">
+      <p class="section__text__p1">Kenali Lebih Jauh</p>
+      <h1 class="title">Tentang Saya</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            src="./assets/pengalaman1.png"
+            alt="Profile picture"
+            class="about-pic"
+          />
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="./assets/experience.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <h3>Pengalaman</h3>
+              <p>3 tahun <br />Ecommerce Spesialist</p>
+            </div>
+            <div class="details-container">
+              <img
+                src="./assets/education.png"
+                alt="Education icon"
+                class="icon"
+              />
+              <h3>Pendidikan</h3>
+              <p>Smk Nusa Bangsa<br />Rekaya Perangkat Lunak</p>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+              Saya menempuh pendidikan di SMK Nusa Bangsa dengan jurusan
+              Rekayasa Perangkat Lunak (RPL). Selama tiga tahun, saya
+              mempelajari dasar-dasar pemrograman, pengembangan aplikasi,basis
+              data,serta pemahaman sistem informasi. Pendidikan ini membekali
+              saya dengan keterampilan teknis dan logika pemrograman yang kuat,
+              serta kemampuan bekerja secara tim dalam proyek perangkat lunak.
+            </p>
+          </div>
+        </div>
       </div>
-      <div class="imgBx">
-        <img src="images/about.jpeg" alt="" class="fitBg" />
-      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#experience'"
+      />
     </section>
-
-    <div class="post-filter container">
-      <span class="filter-item active-filter" data-filter="all">Semua</span>
-      <span class="filter-item" data-filter="tech">Teknologi</span>
-      <span class="filter-item" data-filter="food">mbadok</span>
-      <span class="filter-item" data-filter="news">info purel</span>
-    </div>
-
-    <div class="post container">
-      <!-- Post 1 -->
-      <div class="post-box tech">
-        <img src="images/img1.jpg" alt="" class="post-img" />
-        <h2 class="category">Teknologi</h2>
-        <a href="#" class="post-title"
-          >Tutor Mbandem ndase Tonggo seng Iri Dengki</a
-        >
-        <span class="post-date">9 oktober 2024</span>
-        <p class="post-description">
-          cukup ambil watu setelah itu anda bergerak ke arah tonggomu
-          ssetelah itu anda ancang ancang sambil fokus ngeker ndse tonggomu
-          dsetelah itu ayunkan tanganmu dengan sekuat mungkin biar powernya dan kekuatanya berasa wkwk
-          Corporis, voluptates.
-        </p>
-        <div class="profile">
-          <img src="images/testi1.jpg" alt="" class="profile-img" />
-          <span class="profile-name">MKHB</span>
+    <section id="experience">
+      <p class="section__text__p1">Jelajahi Saya</p>
+      <h1 class="title">Pengalaman</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Ecommerce Spesialist</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>HTML</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>CSS</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>SASS</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>JavaScript</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>TypeScript</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Material UI</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="details-container">
+            <h2 class="experience-sub-title">Ecommerce Spesialist</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>PostgreSQL</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Node JS</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Express JS</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Git</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+            </div>
+          </div>
         </div>
       </div>
-      <!-- Post 2 -->
-      <div class="post-box food">
-        <img src="images/img2.jpg" alt="" class="post-img" />
-        <h2 class="category">Teknologi</h2>
-        <a href="#" class="post-title">Cara ubah Dosa Jadi Saldo Dana</a>
-        <span class="post-date">12 Feb 2022</span>
-        <p class="post-description">
-         cukup request karo gustine: ti gusti ubah no doso ku dadi saldo dana
-          tutorial dungo: pikiren dewe.. nek tutor golek tobrut aku iso
-          iki guyon ya ges ya ojo serius tenanan, seng serius kon mrene
-          tak gawekne kopi, di jak ngopi wae
-        </p>
-        <div class="profile">
-          <img src="images/testi1.jpg" alt="" class="profile-img" />
-          <span class="profile-name">MKHB</span>
-        </div>
-      </div>
-      <!-- Post 3 -->
-      <div class="post-box food">
-        <img src="images/img3.jpg" alt="" class="post-img" />
-        <h2 class="category">Food</h2>
-        <a href="#" class="post-title">cara mengubah nasib jadi nasi goreng</a>
-        <span class="post-date">9 oktober 2024</span>
-        <p class="post-description">
-          Kalau nasib nggak bisa diubah, yuk kita ubah jadi nasi goreng!
-          sTambah kecap, kasih telur, campur ayam—biar hidup lebih enak, minimal di perut!
-          Kalau masih kurang gurih, tinggal tambah Brangkal di belakang rumah
-          dan di kasih toping ricarica kadal
-        </p>
-        <div class="profile">
-          <img src="images/testi1.jpg" alt="" class="profile-img" />
-          <span class="profile-name">MKHB</span>
-        </div>
-      </div>
-      <!-- Post 4 -->
-      <div class="post-box news">
-        <img src="images/img4.jpg" alt="" class="post-img" />
-        <h2 class="category">Tech</h2>
-        <a href="#" class="post-title">cara jadi Manusia yang SIGMA Sekali</a>
-        <span class="post-date">12 Feb 2022</span>
-        <p class="post-description">
-          Bro, jadi sigma itu gampang, tapi butuh komitmen! Pertama, fokus sama diri sendiri. Jaga mental
-         dan fisik, kayak gym regular biar makin kekar. Ingat, otak dan badan itu harus seimbang, bro!"
-          biasanya digunakan ketika melihat wanita yang
-         "Kedua, jangan terlalu mikirin omongan orang. Jadi sigma itu berarti jalanin hidup sesuai prinsipmu
-        </p>
-        <div class="profile">
-          <img src="images/testi1.jpg" alt="" class="profile-img" />
-          <span class="profile-name">MKHB</span>
-        </div>
-      </div>
-      <!-- Post 5 -->
-      <div class="post-box tech">
-        <img src="images/img5.jpg" alt="" class="post-img" />
-        <h2 class="category">Tech</h2>
-        <a href="#" class="post-title">Tutor kayak Thomas Selby</a>
-        <span class="post-date">12 Feb 2022</span>
-        <p class="post-description">
-         "Bro, kalo mau jadi Thomas Selby, kita harus belajar dari yang terbaik! Pertama, kita harus punya
-          kita harus punya mindset juara. Selby itu selalu fokus dan percaya diri,
-          Jadi kita juga harus berani sama diri sendiri.
-          Setiap hari, tanamkan dalam diri kalo kita bisa mencapai impian!"
-        </p>
-        <div class="profile">
-          <img src="images/testi1.jpg" alt="" class="profile-img" />
-          <span class="profile-name">MKHB</span>
-        </div>
-      </div>
-      <!-- Post 6 -->
-      <div class="post-box news">
-        <img src="images/img4.jpg" alt="" class="post-img" />
-        <h2 class="category">News</h2>
-        <a href="#" class="post-title">Apa itu Purel</a>
-        <span class="post-date">12 Feb 2022</span>
-        <p class="post-description">
-          istilah dalam bahasa gaul atau bahasa prokem Jawa untuk
-          menyebut seorang perempuan pemandu karaoke atau pekerja malam
-          Istilah ini populer di daerah Jawa Timur dan sekitarnya.
-          sopo seng hoby ne nyanyi hayo.. wkwkw
-        </p>
-        <div class="profile">
-          <img src="images/testi1.jpg" alt="" class="profile-img" />
-          <span class="profile-name">MKHB</span>
-        </div>
-      </div>
-      <!-- Post 7 -->
-      <div class="post-box tech">
-        <img src="images/img7.jpg" alt="" class="post-img" />
-        <h2 class="category">Tech</h2>
-        <a href="#" class="post-title">cara mengatasi KREAK</a>
-        <span class="post-date">9 oktober 2024</span>
-        <p class="post-description">
-         Mengadakan seminar, workshop, atau diskusi tentang dampak negatif klitih dan
-         kekerasan. Edukasi tentang pentingnya damai dan kerja sama di antara remaja.
-          Mengembangkan kegiatan positif seperti olahraga, seni, dan kegiatan komunitas yang
-          bisa menyatukan remaja dan mengalihkan perhatian mereka dari kekerasan.
-        </p>
-        <div class="profile">
-          <img src="images/testi1.jpg" alt="" class="profile-img" />
-          <span class="profile-name">MKHB</span>
-        </div>
-      </div>
-      <!-- Post 1 -->
-      <div class="post-box news">
-        <img src="images/img8.jpg" alt="" class="post-img" />
-        <h2 class="category">News</h2>
-        <a href="#" class="post-title">cara berhenti ngeSlot</a>
-        <span class="post-date">9 oktober 2024</span>
-        <p class="post-description">
-          Bro, dengerin ya! Ngeslot itu kayak minum kopi terlalu banyak, awalnya enak, tapi lama-lama
-          bikin jantung deg-degan dan dompet tipis! Gimana kalau kita stop dulu? Kita bisa nyari aktivitas
-          debitis est perferendis aut quasi ea unde repudiandae iste architecto.
-          lain yang lebih asyik, kayak main bola, nonton film, atau nongkrong sambil makan-makan.
-        </p>
-        <div class="profile">
-          <img src="images/testi1.jpg" alt="" class="profile-img" />
-          <span class="profile-name">MKHB</span>
-        </div>
-      </div>
-      <!-- Post 9 -->
-      <div class="post-box food">
-        <img src="images/img10.jpg" alt="" class="post-img" />
-        <h2 class="category">Food</h2>
-        <a href="#" class="post-title">cara pesen michat</a>
-        <span class="post-date">9 oktober 2024</span>
-        <p class="post-description">
-          download michat and di aplikasi playstore, setelah itu buat aku
-          setelah akun jadi carilah cewek yang terdekat
-          setelah itu, ngenyang o sak karepmu nek iso urunan mbi koncomu langsung
-          gas.. main cah 2 wkwkw..
-        </p>
-        <div class="profile">
-          <img src="images/testi1.jpg" alt="" class="profile-img" />
-          <span class="profile-name">MKHB</span>
-        </div>
-      </div>
-    </div>
-
-    <footer>
-      <div class="footer-container">
-        <div class="sec aboutus">
-          <h2>About Us</h2>
-          <p>
-            itulah cerita nggak jelas tentang supriyadi 
-            nggak jelas sperti mukanya
-            tpi konten ini jangan di tiru
-            bahaya bagi anda, ini hanyalah istilah jawa GUYONAN wkwkw
-          </p>
-          <ul class="sci">
-            <li>
-              <a href="#"><i class="bx bxl-facebook"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="bx bxl-instagram"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="bx bxl-twitter"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="bx bxl-linkedin"></i></a>
-            </li>
-          </ul>
-        </div>
-        <div class="sec quicklinks">
-          <h2>Quick Links</h2>
-          <ul>
-            <li><a href="#">OMAH</a></li>
-            <li><a href="#">About Rasane</a></li>
-          </ul>
-        </div>
-        <div class="sec contactBx">
-          <h2>info kontak suprek</h2>
-          <ul class="info">
-            <li>
-              <span><i class="bx bxs-map"></i></span>
-              <span
-                >wrinnginjajar <br />
-                mranggen demak <br />
-                Uk</span
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#projects'"
+      />
+    </section>
+    <section id="projects">
+      <p class="section__text__p1">info update saya</p>
+      <h1 class="title">Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-1.png"
+                alt="Project 1"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Project pertama</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
               >
-            </li>
-            <li>
-              <span><i class="bx bx-envelope"></i></span>
-              <p>
-                <a href="mailto:suprek156@gmail.com"
-                  >suprek156@gmail.com</a
-                >
-              </p>
-            </li>
-          </ul>
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-2.png"
+                alt="Project 2"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Project kedua</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-3.png"
+                alt="Project 3"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">project ketiga</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
         </div>
       </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#contact'"
+      />
+    </section>
+    <section id="contact">
+      <p class="section__text__p1">hubungi saya</p>
+      <h1 class="title">contact supri</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:examplemail@gmail.com">suprek156@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://www.linkedin.com">LinkedIn</a></p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">Tentang</a></li>
+            <li><a href="#experience">Pengalaman</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#169; 2023 Supriyadi. All Rights Reserved.</p>
     </footer>
-
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
-      integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script src="main.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
